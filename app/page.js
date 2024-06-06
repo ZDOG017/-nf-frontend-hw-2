@@ -24,6 +24,9 @@ export default function Home() {
     if (tasks.length > 0) {
       console.log('Storing tasks to localStorage:', tasks);
       localStorage.setItem('tasks', JSON.stringify(tasks));
+    } else {
+      console.log('Clearing tasks from localStorage');
+      localStorage.removeItem('tasks');
     }
   }, [tasks]);
 
